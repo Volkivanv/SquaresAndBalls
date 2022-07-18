@@ -80,7 +80,7 @@ Window {
                 name: "InitialState"
                 PropertyChanges {
                     target: ball
-                    x:leftRectangle.x+5
+                    x:leftRectangle.x + 5
                 }
             } ,
             State{
@@ -94,17 +94,15 @@ Window {
             }
 
         ]
-
             transitions:[
                 Transition{
                 from: "OtherState"
                 to: "InitialState"
 
                 NumberAnimation {
-
-                    property: "x,y"
+                    properties: "x,y"
                     duration: 1000
-                    easing.type: Easing.InCurve
+                    easing.type: Easing.InCirc
                 }
 
             }
